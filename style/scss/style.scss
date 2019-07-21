@@ -1,0 +1,94 @@
+// General
+$bgColor1: hsl(133,7,15);
+$textColor1:  hsl(133,40,80);
+
+$bgColor2: hsl(133,40,80);
+$textColor2:  hsl(133,7,15);
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background: $bgColor1;
+
+    font-size: 1.2rem;
+
+    font-family: NationalPark, sans-serif;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h1 { font-size: 4rem; }
+
+section { 
+    padding: 4rem 1rem;
+
+    background-color: $bgColor1;
+    color: $textColor1;
+
+    .color2 {
+        background-color: $bgColor2;
+        color: $textColor2;
+    }
+}
+
+.sign {
+    border: 0.625rem $textColor1 solid;
+    border-radius: 1.25rem;
+    padding: 4rem 1rem;
+
+    display: inline-block;
+    margin: 0 auto;
+}
+.color2 .sign {
+    border-color: $textColor2;
+}
+
+// Sections
+#parallax {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background: linear-gradient(to top, hsl(178,100,100) 0%,hsl(178,100,74) 100%);
+
+    #img-wrapper {
+        flex-shrink: 0;
+        position: relative;
+        
+        height: 720px;
+        width: 1280px; 
+        @media (min-width:1280px) { width: 100vw; }
+
+        img {
+            position: absolute;
+            bottom: 0;
+
+            @media (min-width:1280px) { width: 100vw; }
+
+            will-change: transform;
+        }
+
+    }
+}
+
+#intro {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    h1 { margin-top: 0; }
+}
+
+#photos {
+}

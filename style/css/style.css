@@ -1,0 +1,81 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #242925;
+  font-size: 1.2rem;
+  font-family: NationalPark, sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+section {
+  padding: 4rem 1rem;
+  background-color: #242925;
+  color: #b8e0c0;
+}
+section .color2 {
+  background-color: #b8e0c0;
+  color: #242925;
+}
+
+.sign {
+  border: 0.625rem #b8e0c0 solid;
+  border-radius: 1.25rem;
+  padding: 4rem 1rem;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.color2 .sign {
+  border-color: #242925;
+}
+
+#parallax {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  background: linear-gradient(to top, white 0%, #7afffb 100%);
+}
+#parallax #img-wrapper {
+  flex-shrink: 0;
+  position: relative;
+  height: 720px;
+  width: 1280px;
+}
+@media (min-width: 1280px) {
+  #parallax #img-wrapper {
+    width: 100vw;
+  }
+}
+#parallax #img-wrapper img {
+  position: absolute;
+  bottom: 0;
+  will-change: transform;
+}
+@media (min-width: 1280px) {
+  #parallax #img-wrapper img {
+    width: 100vw;
+  }
+}
+
+#intro {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+#intro h1 {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
